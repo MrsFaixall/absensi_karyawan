@@ -1,10 +1,10 @@
 # Proyek Absensi Karyawan
 
+![Absensi Karyawan](https://example.com/link-to-your-image.jpg) <!-- Ganti dengan link gambar yang sesuai -->
+
 Proyek ini adalah aplikasi berbasis PHP untuk mencatat absensi karyawan. Aplikasi ini memungkinkan Anda untuk mengelola data absensi, termasuk waktu masuk dan keluar karyawan.
 
 ## Struktur Direktori
-
-Berikut adalah struktur direktori dasar dalam proyek ini:
 
 - `index.php` - Halaman utama yang menampilkan daftar absensi karyawan.
 - `koneksi.php` - Skrip untuk menghubungkan ke database.
