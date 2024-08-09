@@ -1,4 +1,3 @@
-
 # Proyek Absensi Karyawan
 
 Proyek ini adalah aplikasi berbasis PHP untuk mencatat absensi karyawan. Aplikasi ini memungkinkan Anda untuk mengelola data absensi, termasuk waktu masuk dan keluar karyawan.
@@ -30,10 +29,11 @@ Ikuti langkah-langkah berikut untuk menginstal dan menjalankan proyek ini:
 
     ```bash
     git clone https://github.com/username/repository.git
-    cd repository
     ```
 
-2. Buat database baru di MySQL dengan nama `db_absensi` dan tabel `absensi`:
+       cd repository 
+
+3. Buat database baru di MySQL dengan nama `db_absensi` dan tabel `absensi`:
 
     ```sql
     -- Membuat database bernama db_absensi
@@ -53,7 +53,13 @@ Ikuti langkah-langkah berikut untuk menginstal dan menjalankan proyek ini:
     );
     ```
 
-3. Konfigurasi koneksi database dengan mengedit file `koneksi.php`:
+4. **Impor Database (Opsional):** Jika Anda memiliki file SQL yang sudah siap, Anda bisa mengimpor database dengan perintah berikut di terminal:
+
+    ```bash
+    mysql -u username -p db_absensi < path/to/your/database.sql
+    ```
+
+5. Konfigurasi koneksi database dengan mengedit file `koneksi.php`:
 
     ```php
     <?php
@@ -70,7 +76,7 @@ Ikuti langkah-langkah berikut untuk menginstal dan menjalankan proyek ini:
     ?>
     ```
 
-4. Jalankan proyek ini melalui server web Anda, misalnya dengan menggunakan XAMPP atau WAMP, dan akses melalui browser di `http://localhost/repository`.
+6. Jalankan proyek ini melalui server web Anda, misalnya dengan menggunakan XAMPP atau WAMP, dan akses melalui browser di `http://localhost/repository`.
 
 ## Penggunaan
 
@@ -86,7 +92,3 @@ Jika Anda ingin berkontribusi pada proyek ini, silakan lakukan fork dan kirimkan
 ## Lisensi
 
 Proyek ini dilisensikan di bawah [MIT License](LICENSE).
-";
-
-// Membuat dan menulis konten ke dalam file README.md
-file_put_contents($filename, $content);
