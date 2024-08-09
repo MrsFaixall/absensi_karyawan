@@ -8,7 +8,7 @@ Berikut adalah struktur direktori dasar dalam proyek ini:
 
 - `index.php` - Halaman utama yang menampilkan daftar absensi karyawan.
 - `koneksi.php` - Skrip untuk menghubungkan ke database.
-- `absensi.php` - Halaman untuk mencatat absensi karyawan.
+- `keluar.php` - Halaman untuk mencatat absensi karyawan.
 - `update.php` - Halaman untuk memperbarui data absensi.
 - `delete.php` - Skrip untuk menghapus data absensi.
 - `db/` - Berisi skrip untuk koneksi database dan pengaturan lainnya.
@@ -28,11 +28,10 @@ Ikuti langkah-langkah berikut untuk menginstal dan menjalankan proyek ini:
 1. Clone repository ini ke mesin lokal Anda:
 
     ```bash
-    git clone https://github.com/username/repository.git
+    git clone https://github.com/MrsFaixall/absensi_karyawan.git
     ```
 
-       cd repository 
-
+       cd absensi_karyawan
 3. Buat database baru di MySQL dengan nama `db_absensi` dan tabel `absensi`:
 
     ```sql
@@ -62,17 +61,15 @@ Ikuti langkah-langkah berikut untuk menginstal dan menjalankan proyek ini:
 5. Konfigurasi koneksi database dengan mengedit file `koneksi.php`:
 
     ```php
-    <?php
-    $host = 'localhost';
-    $user = 'username';
-    $pass = 'password';
-    $db   = 'db_absensi';
-
-    $connection = mysqli_connect($host, $user, $pass, $db);
-
-    if (!$connection) {
-        die('Koneksi gagal: ' . mysqli_connect_error());
-    }
+      <?php
+    $db_host = "localhost";
+    $db_user = "root";
+    $db_pass = "";
+    $db_name = "db_karyawan";    
+    
+    $connection = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+    
+    echo 'tampilkan hasil';
     ?>
     ```
 
@@ -80,7 +77,7 @@ Ikuti langkah-langkah berikut untuk menginstal dan menjalankan proyek ini:
 
 ## Penggunaan
 
-1. **Mencatat Absensi:** Gunakan halaman `absensi.php` untuk mencatat waktu masuk dan keluar karyawan.
+1. **Mencatat Absensi:** Gunakan halaman `keluar.php` untuk mencatat waktu masuk dan keluar karyawan.
 2. **Melihat Data Absensi:** Halaman `index.php` menampilkan semua data absensi karyawan.
 3. **Memperbarui Data Absensi:** Gunakan halaman `update.php` untuk memperbarui data absensi yang ada.
 4. **Menghapus Data Absensi:** Data dapat dihapus menggunakan tombol hapus di halaman `index.php`.
@@ -89,6 +86,3 @@ Ikuti langkah-langkah berikut untuk menginstal dan menjalankan proyek ini:
 
 Jika Anda ingin berkontribusi pada proyek ini, silakan lakukan fork dan kirimkan pull request dengan perubahan yang Anda usulkan.
 
-## Lisensi
-
-Proyek ini dilisensikan di bawah [MIT License](LICENSE).
